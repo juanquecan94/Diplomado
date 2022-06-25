@@ -17,4 +17,13 @@ st.set_page_config(page_title='Proyecto-JQ - home',
                     layout="wide", 
                     page_icon=':peach:',
                     initial_sidebar_state="expanded")
-                    
+st.title('Proyecto Final')
+st.header('Juan Quecan')
+
+def get_data():
+    url = 'https://raw.githubusercontent.com/juanquecan94/Diplomado/master/Aplicacion/Data/kc_house_data.csv'
+    return pd.read_csv(url)
+
+data = get_data()
+data_ref = data.copy()
+
